@@ -20,10 +20,11 @@ struct ContentView: View {
                 }
             }
             
-            if userData.currentSubtask != nil {
                 SubtaskCard()
                     .padding(.all)
-            }
+                    .frame(width: 300.0)
+                    .disabled(!(userData.currentSubtask != nil))
+
         }
         .onAppear {
                         
